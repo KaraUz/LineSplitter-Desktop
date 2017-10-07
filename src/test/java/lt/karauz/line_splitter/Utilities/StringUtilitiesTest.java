@@ -18,8 +18,8 @@ public class StringUtilitiesTest {
         public void ThreeLinesAsExpected() {
             String text = "Our goal is to keep an innovation first attitude at the center of TeleSoftas. We encourage our employees to search, build, and innovate -- and that’s what really makes things happen.";
             String textExpected =
-                    "Our goal is to keep an innovation first attitude at the center of\n"
-                            + "TeleSoftas. We encourage our employees to search, build, and\n"
+                    "Our goal is to keep an innovation first attitude at the center of" + StringUtilities.LINE_SEPARATOR
+                            + "TeleSoftas. We encourage our employees to search, build, and" + StringUtilities.LINE_SEPARATOR
                             + "innovate -- and that’s what really makes things happen.";
 
             String formattedText = StringUtilities.splitIntoLines(text, 68);
@@ -44,7 +44,8 @@ public class StringUtilitiesTest {
         @Test
         public void WordLongerThanLine() {
             String text = "Incomprehensibilities";
-            String textExpected = "Incomprehe\nnsibilitie\ns";
+            String textExpected = "Incomprehe" + StringUtilities.LINE_SEPARATOR
+                    + "nsibilitie"+ StringUtilities.LINE_SEPARATOR +"s";
 
             String formattedText = StringUtilities.splitIntoLines(text,10);
 
