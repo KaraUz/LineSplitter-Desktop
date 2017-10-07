@@ -54,13 +54,23 @@ public class StringUtilitiesTest {
 
         @Test
         public void WordEqualToLine() {
-            String text = "Incomprehensibilities";
-            String textExpected = "Incomprehensibilities";
+            String text = "Incomprehensibilities are cool";
+            String textExpected = "Incomprehensibilities" + StringUtilities.LINE_SEPARATOR + "are cool";
 
             String formattedText = StringUtilities.splitIntoLines(text,21);
 
             assertEquals(formattedText, textExpected);
         }
+
+        @Test
+        public void WordsEqualToLine() {
+            String text = "zodis zodis zodis";
+            String textExpected = "zodis zodis" + StringUtilities.LINE_SEPARATOR + "zodis";
+
+            String formattedText = StringUtilities.splitIntoLines(text,11);
+
+            assertEquals(formattedText, textExpected);
+            }
 
         @Test
         public void LineLongerThanWord() {

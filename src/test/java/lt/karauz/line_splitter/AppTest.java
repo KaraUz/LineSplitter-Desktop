@@ -3,16 +3,11 @@ package lt.karauz.line_splitter;
 import org.junit.*;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
-import sun.applet.Main;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
-/**
- * Unit test for simple App.
- */
 @RunWith(Enclosed.class)
 public class AppTest
 {
